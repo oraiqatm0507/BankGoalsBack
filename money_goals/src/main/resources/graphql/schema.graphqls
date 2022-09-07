@@ -1,0 +1,39 @@
+type Query {
+	addGoal(name: String): Goal
+	goalById(id: ID): Goal
+
+}
+
+type Goal {
+	id: ID
+	name: String
+	goalMsg: String
+	goalOwner: String
+	startDate: String
+	endDate: String
+	currentBalance: Float
+	goalBalance: Float
+	reminderBuffer: String
+	goalColor: String
+	estimatedDurationOfGoal: String
+	preferredGoalDuration: String
+	goalType: GoalType
+	accountType: AccountType
+	isCompleted: Boolean
+}
+
+enum GoalType {
+  SAVING
+  BUDGETING
+  PAYMENT
+  INVESTING
+  STOCK
+  CRYPTO
+  
+}
+
+enum AccountType{
+	CHECKING
+	SAVING
+}
+
