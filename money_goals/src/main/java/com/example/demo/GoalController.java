@@ -16,28 +16,36 @@ public class GoalController {
 	GoalsRepo goalsRepo;
 	
 	
-	
-	// TODO: Return a goal by goal owner ID
 	@QueryMapping
-	public Goal goalById(@Argument String id) {
-		//return getBydId(id);
-		return new Goal();
+	public Goal addGoal(@Argument GoalInfo goalInfo) {
+		
+		Goal newGoal = new Goal(goalInfo);
+		System.out.println(goalInfo.getName());
+		return goalsRepo.addGoal(newGoal);
+		
 	}
 	
-	// TODO: Return a goal by goal ID
+	
+	@QueryMapping
+	public Goal goalById(@Argument long id) {
+		return goalsRepo.getGoalById(id);
+	
+	}
+	
+	
+	@QueryMapping
+	public List<Goal> getGoalsByOwner(@Argument String ownerId){
+		return goalsRepo.getGoalsByOwnerId(ownerId);
+	}
+	
+	
 	
 	
 	
 	// TODO: When user connects to login page for first time, get all of that user's goal info.
 	
 	
-	// TODO: Add a new goal to DB
 	
-	@QueryMapping
-	public Goal addGoal(@Argument String name) {
-		Goal goal = new Goal(name, "Grab Lunch");
-		return goalsRepo.addGoal(goal);
-	}
 	
 	// TODO: Update an existing goals info with user defined changes. (name, amount, end goal amount etc.)
 	

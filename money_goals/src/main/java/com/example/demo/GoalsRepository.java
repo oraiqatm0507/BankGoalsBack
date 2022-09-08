@@ -1,9 +1,13 @@
 package com.example.demo;
 
-import org.springframework.data.repository.CrudRepository;
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface GoalsRepository extends CrudRepository<Goal, Long> {
+public interface GoalsRepository extends JpaRepository<Goal, Long> {
+	List<Goal> findByGoalOwner(String ownerId);
 
 }

@@ -1,8 +1,35 @@
 type Query {
-	addGoal(name: String): Goal
+	addGoal(goalInfo: GoalInfo ): Goal
 	goalById(id: ID): Goal
+	getGoalsByOwner(ownerId: String): [Goal]
+}
+
+"""
+Comments: If you make another field in these classes be sure to make them private within the class. 
+For instance in classes GoalInfo and Goal all the fields are private with getters and setters. If
+you make them public graphql will not read the data correctly on input.
+"""
+
+input GoalInfo {
+	id: ID
+	name: String
+	goalMsg: String
+	goalOwner: String
+	startDate: String
+	endDate: String
+	startingInstallment: Float
+	currentBalance: Float
+	goalBalance: Float
+	reminderBuffer: String
+	goalColor: String
+	estimatedDurationOfGoal: String
+	preferredGoalDuration: String
+	goalType: GoalType
+	accountType: AccountType
+	isCompleted: Boolean
 
 }
+
 
 type Goal {
 	id: ID
@@ -11,6 +38,7 @@ type Goal {
 	goalOwner: String
 	startDate: String
 	endDate: String
+	startingInstallment: Float
 	currentBalance: Float
 	goalBalance: Float
 	reminderBuffer: String
