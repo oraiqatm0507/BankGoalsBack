@@ -17,7 +17,7 @@ public class GoalController {
 	
 	
 	@QueryMapping
-	public Goal addGoal(@Argument GoalInfo goalInfo) {
+	public Goal MG_addGoal(@Argument GoalInfo goalInfo) {
 		
 		Goal newGoal = new Goal(goalInfo);
 		System.out.println(goalInfo.getName());
@@ -27,23 +27,16 @@ public class GoalController {
 	
 	
 	@QueryMapping
-	public Goal goalById(@Argument long id) {
+	public Goal MG_goalById(@Argument long id) {
 		return goalsRepo.getGoalById(id);
 	
 	}
 	
 	
 	@QueryMapping
-	public List<Goal> getGoalsByOwner(@Argument String ownerId){
+	public List<Goal> MG_getGoalsByOwner(@Argument String ownerId){
 		return goalsRepo.getGoalsByOwnerId(ownerId);
 	}
-	
-	
-	
-	
-	
-	// TODO: When user connects to login page for first time, get all of that user's goal info.
-	
 	
 	
 	
@@ -53,5 +46,12 @@ public class GoalController {
 	// TODO: Delete goal by id
 	
 	
+	// TODO: return multiple goals by name, and goal type
+	
+	
 	// TODO: get estimated goal duration
+	
+	
+	// TODO: CHAT HANDLER
+	
 }

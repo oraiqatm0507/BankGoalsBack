@@ -1,7 +1,11 @@
 type Query {
-	addGoal(goalInfo: GoalInfo ): Goal
-	goalById(id: ID): Goal
-	getGoalsByOwner(ownerId: String): [Goal]
+	MG_addGoal(goalInfo: GoalInfo ): Goal
+	MG_goalById(id: ID): Goal
+	MG_getGoalsByOwner(ownerId: String): [Goal]
+	MG_updateGoalById(id: ID): String
+	MG_deleteGoalById(id: ID): String
+	MG_getGoalsByName(name:String):Goal
+	MG_getEstimatedGoalDuration(id: ID):String
 }
 
 """
