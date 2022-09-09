@@ -32,6 +32,7 @@ public class Goal {
 	private String goalColor;
 	private String estimatedDurationOfGoal;
 	private String preferredGoalDuration;
+	private float aquiredAmount;
 	private GoalType goalType;
 	private AccountType accountType;
 	private boolean isCompleted;
@@ -61,6 +62,7 @@ public class Goal {
 		this.setReminderBuffer(goalInfo.getReminderBuffer());
 		this.setGoalColor(goalInfo.getGoalColor());
 		this.setEstimatedDurationOfGoal(goalInfo.getEstimatedDurationOfGoal());
+		this.setAquiredAmount(goalInfo.getAquiredAmount());
 		this.setGoalType(goalInfo.getGoalType());
 		this.setAccountType(goalInfo.getAccountType());
 		this.setCompleted(goalInfo.isCompleted());
@@ -186,6 +188,15 @@ public class Goal {
 	public void setCompleted(boolean isCompleted) {
 		this.isCompleted = isCompleted;
 	}
+
+	public float getAquiredAmount() {
+		return aquiredAmount;
+	}
+
+	public void setAquiredAmount(float aquiredAmount) {
+		this.aquiredAmount = aquiredAmount;
+	}
+
 	
 	
 }

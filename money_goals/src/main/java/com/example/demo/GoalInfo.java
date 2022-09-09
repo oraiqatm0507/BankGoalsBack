@@ -22,6 +22,7 @@ public class GoalInfo {
 	private String goalColor;
 	private String estimatedDurationOfGoal;
 	private String preferredGoalDuration;
+	private float aquiredAmount;
 	private GoalType goalType;
 	private AccountType accountType;
 	private boolean isCompleted;
@@ -123,5 +124,11 @@ public class GoalInfo {
 	}
 	public void setCompleted(boolean isCompleted) {
 		this.isCompleted = isCompleted;
+	}
+	public float getAquiredAmount() {
+		return aquiredAmount;
+	}
+	public void setAquiredAmount(float aquiredAmount) {
+		this.aquiredAmount = aquiredAmount;
 	}
 }

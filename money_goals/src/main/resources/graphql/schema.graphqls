@@ -29,6 +29,7 @@ input GoalInfo {
 	estimatedDurationOfGoal: String
 	preferredGoalDuration: String
 	goalType: GoalType
+	aquiredAmount: Float
 	accountType: AccountType
 	isCompleted: Boolean
 
@@ -50,6 +51,7 @@ type Goal {
 	estimatedDurationOfGoal: String
 	preferredGoalDuration: String
 	goalType: GoalType
+	aquiredAmount: Float
 	accountType: AccountType
 	isCompleted: Boolean
 }
