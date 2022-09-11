@@ -1,4 +1,6 @@
 type Query {
+	MG_createAccount(userInfo: G_UserInfo): Boolean
+	MG_loginUser(userInfo: G_UserInfo): String
 	MG_addGoal(goalInfo: GoalInfo ): Goal
 	MG_goalById(id: ID): Goal
 	MG_getGoalsByOwner(ownerId: String): [Goal]
@@ -33,6 +35,7 @@ input GoalInfo {
 	aquiredAmount: Float
 	accountType: AccountType
 	isCompleted: Boolean
+	recipientId: String
 
 }
 
@@ -55,6 +58,7 @@ type Goal {
 	aquiredAmount: Float
 	accountType: AccountType
 	isCompleted: Boolean
+	recipientId: String
 }
 
 enum GoalType {
@@ -70,5 +74,19 @@ enum GoalType {
 enum AccountType{
 	CHECKING
 	SAVING
+}
+
+
+type G_User{
+	id: ID
+	email:String
+	password:String
+
+}
+
+input G_UserInfo{
+	id: ID
+	email:String
+	password:String
 }
 

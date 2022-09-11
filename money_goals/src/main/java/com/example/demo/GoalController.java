@@ -16,6 +16,23 @@ public class GoalController {
 	GoalsRepo goalsRepo;
 	
 	
+	
+	
+	//Simple Authentication
+	@QueryMapping
+	public boolean MG_createAccount(@Argument G_UserInfo userInfo) {
+		return goalsRepo.createAccount(userInfo);
+		
+	}
+	
+	@QueryMapping
+	public String MG_loginUser(@Argument G_UserInfo userInfo) {
+		return goalsRepo.loginUser(userInfo);
+	}
+	
+	
+	
+	
 	@QueryMapping
 	public Goal MG_addGoal(@Argument GoalInfo goalInfo) {
 		

@@ -26,6 +26,7 @@ public class GoalInfo {
 	private GoalType goalType;
 	private AccountType accountType;
 	private boolean isCompleted;
+	private String recipientId;
 	
 	
 	//Getters and Setters
@@ -130,5 +131,11 @@ public class GoalInfo {
 	}
 	public void setAquiredAmount(float aquiredAmount) {
 		this.aquiredAmount = aquiredAmount;
+	}
+	public String getRecipientId() {
+		return recipientId;
+	}
+	public void setRecipientId(String recipientId) {
+		this.recipientId = recipientId;
 	}
 }

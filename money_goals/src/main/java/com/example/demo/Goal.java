@@ -36,7 +36,7 @@ public class Goal {
 	private GoalType goalType;
 	private AccountType accountType;
 	private boolean isCompleted;
-	
+	private String recipientId;
 	
 	
 	//Constructors
@@ -66,6 +66,7 @@ public class Goal {
 		this.setGoalType(goalInfo.getGoalType());
 		this.setAccountType(goalInfo.getAccountType());
 		this.setCompleted(goalInfo.isCompleted());
+		this.setRecipientId(goalInfo.getRecipientId());
 	}
 
 	//Getters and Setters
@@ -195,6 +196,14 @@ public class Goal {
 
 	public void setAquiredAmount(float aquiredAmount) {
 		this.aquiredAmount = aquiredAmount;
+	}
+
+	public String getRecipientId() {
+		return recipientId;
+	}
+
+	public void setRecipientId(String recipientId) {
+		this.recipientId = recipientId;
 	}
 
 	
