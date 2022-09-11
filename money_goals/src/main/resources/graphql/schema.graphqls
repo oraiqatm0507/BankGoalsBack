@@ -6,6 +6,7 @@ type Query {
 	MG_deleteGoalById(id: ID): String
 	MG_getGoalsByName(name:String):Goal
 	MG_getEstimatedGoalDuration(id: ID):String
+	MG_getFirst: Goal
 }
 
 """

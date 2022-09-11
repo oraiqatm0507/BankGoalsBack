@@ -38,6 +38,10 @@ public class GoalController {
 		return goalsRepo.getGoalsByOwnerId(ownerId);
 	}
 	
+	@QueryMapping
+	public Goal MG_getFirst() {
+		return goalsRepo.getGoalById(1);
+	}
 	
 	
 	// TODO: Update an existing goals info with user defined changes. (name, amount, end goal amount etc.)
