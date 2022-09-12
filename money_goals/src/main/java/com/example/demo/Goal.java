@@ -68,6 +68,25 @@ public class Goal {
 		this.setCompleted(goalInfo.isCompleted());
 		this.setRecipientId(goalInfo.getRecipientId());
 	}
+	
+	
+	public void copyGoalInfo(GoalInfo goalInfo) {
+		this.setName(goalInfo.getName());
+		this.setGoalMsg(goalInfo.getGoalMsg());
+		this.setStartDate(goalInfo.getStartDate());
+		this.setEndDate(goalInfo.getEndDate());
+		this.setStartingInstallment(goalInfo.getStartingInstallment());
+		this.setCurrentBalance(goalInfo.getCurrentBalance());
+		this.setGoalBalance(goalInfo.getGoalBalance());
+		this.setReminderBuffer(goalInfo.getReminderBuffer());
+		this.setGoalColor(goalInfo.getGoalColor());
+		this.setEstimatedDurationOfGoal(goalInfo.getEstimatedDurationOfGoal());
+		this.setAquiredAmount(goalInfo.getAquiredAmount());
+		this.setGoalType(goalInfo.getGoalType());
+		this.setAccountType(goalInfo.getAccountType());
+		this.setCompleted(goalInfo.isCompleted());
+		this.setRecipientId(goalInfo.getRecipientId());
+	}
 
 	//Getters and Setters
 	public String getName() {

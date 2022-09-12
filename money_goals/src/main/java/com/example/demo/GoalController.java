@@ -55,24 +55,25 @@ public class GoalController {
 		return goalsRepo.getGoalsByOwnerId(ownerId);
 	}
 	
+	
+	
 	@QueryMapping
-	public Goal MG_getFirst() {
-		return goalsRepo.getGoalById(1);
+	public boolean MG_updateGoalById(@Argument long id ,@Argument GoalInfo goalInfo) {
+		return goalsRepo.updateGoal(id, goalInfo);
 	}
 	
 	
-	// TODO: Update an existing goals info with user defined changes. (name, amount, end goal amount etc.)
+	@QueryMapping
+	public boolean MG_deleteGoalById(@Argument long id) {
+		return goalsRepo.deleteGoal(id);
+		
+	}
+
 	
+	@QueryMapping
+	public String MG_getEstimatedGoalDuration(@Argument long id) {
+		return goalsRepo.estimateGoalDuration(id);
+	}
 	
-	// TODO: Delete goal by id
-	
-	
-	// TODO: return multiple goals by name, and goal type
-	
-	
-	// TODO: get estimated goal duration
-	
-	
-	// TODO: CHAT HANDLER
 	
 }
