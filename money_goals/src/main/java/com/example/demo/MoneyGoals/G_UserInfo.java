@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.MoneyGoals;
 
 public class G_UserInfo {
 	private String id;
