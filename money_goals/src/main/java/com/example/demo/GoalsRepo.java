@@ -37,15 +37,16 @@ public class GoalsRepo {
 		return true;
 	}
 	
-	public String loginUser(G_UserInfo userInfo) {
+	public G_User loginUser(G_UserInfo userInfo) {
+		
 		G_User tempUser = userRepo.findByEmail(userInfo.getEmail());
-		System.out.println(tempUser.getId());
+		System.out.println(tempUser.getEmail());
 		if(!tempUser.getPassword().equals(userInfo.getPassword())) {
 			return null;
 		}	
-		String id = String.valueOf(tempUser.getId());
-		
-		return id;
+		System.out.println(tempUser.getId());
+		System.out.println(tempUser.getAccBalance());
+		return tempUser;
 		
 		
 	}

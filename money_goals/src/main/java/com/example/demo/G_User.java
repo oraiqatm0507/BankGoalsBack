@@ -13,6 +13,7 @@ public class G_User {
 	
 	private String email;
 	private String password;
+	private float accBalance;
 	
 	public G_User() {
 		
@@ -21,6 +22,7 @@ public class G_User {
 	public G_User(G_UserInfo userInfo) {
 		this.setEmail(userInfo.getEmail());
 		this.setPassword(userInfo.getPassword());
+		this.setAccBalance(userInfo.getAccBalance());
 	}
 	
 	public long getId() {
@@ -37,5 +39,13 @@ public class G_User {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public float getAccBalance() {
+		return accBalance;
+	}
+
+	public void setAccBalance(float accBalance) {
+		this.accBalance = accBalance;
 	}
 }

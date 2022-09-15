@@ -26,7 +26,7 @@ public class GoalController {
 	}
 	
 	@QueryMapping
-	public String MG_loginUser(@Argument G_UserInfo userInfo) {
+	public G_User MG_loginUser(@Argument G_UserInfo userInfo) {
 		return goalsRepo.loginUser(userInfo);
 	}
 	

@@ -4,6 +4,7 @@ public class G_UserInfo {
 	private String id;
 	private String email;
 	private String password;
+	private float accBalance;
 	
 	
 	public String getId() {
@@ -23,5 +24,11 @@ public class G_UserInfo {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public float getAccBalance() {
+		return accBalance;
+	}
+	public void setAccBalance(float accBalance) {
+		this.accBalance = accBalance;
 	}
 }
