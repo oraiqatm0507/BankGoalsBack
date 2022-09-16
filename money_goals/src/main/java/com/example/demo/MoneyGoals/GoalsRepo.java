@@ -15,8 +15,6 @@ import org.springframework.stereotype.Component;
 @Component("goalsRepo")
 public class GoalsRepo {
 	
-	@Autowired 
-	G_UserRepository userRepo;
 	
 	@Autowired
 	GoalsRepository goalsDB;
@@ -26,30 +24,9 @@ public class GoalsRepo {
 	
 	
 	
+
 	
-	public boolean createAccount(G_UserInfo userInfo) {
-		G_User user = new G_User(userInfo);
-		
-		if(userRepo.findByEmail(userInfo.getEmail()) != null ) {
-			return false;
-		}
-		userRepo.save(user);
-		return true;
-	}
 	
-	public G_User loginUser(G_UserInfo userInfo) {
-		
-		G_User tempUser = userRepo.findByEmail(userInfo.getEmail());
-		System.out.println(tempUser.getEmail());
-		if(!tempUser.getPassword().equals(userInfo.getPassword())) {
-			return null;
-		}	
-		System.out.println(tempUser.getId());
-		System.out.println(tempUser.getAccBalance());
-		return tempUser;
-		
-		
-	}
 	
 	
 	public Goal addGoal(Goal goal) {

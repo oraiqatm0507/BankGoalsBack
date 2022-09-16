@@ -1,6 +1,5 @@
 type Query {
-	MG_createAccount(userInfo: G_UserInfo): Boolean
-	MG_loginUser(userInfo: G_UserInfo): G_User
+
 	MG_addGoal(goalInfo: GoalInfo ): Goal
 	MG_goalById(id: ID): Goal
 	MG_getGoalsByOwner(ownerId: String): [Goal]
@@ -76,20 +75,7 @@ enum AccountType{
 }
 
 
-type G_User{
-	id: ID
-	email:String
-	password:String
-	accBalance:Float
 
-}
-
-input G_UserInfo{
-	id: ID
-	email:String
-	password:String
-	accBalance:Float
-}
 
 
 
