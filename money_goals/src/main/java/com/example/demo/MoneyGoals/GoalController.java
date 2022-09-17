@@ -14,10 +14,7 @@ public class GoalController {
 	
 	@Autowired
 	GoalsRepo goalsRepo;
-	
-	
-	
-	
+
 	
 	
 	@QueryMapping

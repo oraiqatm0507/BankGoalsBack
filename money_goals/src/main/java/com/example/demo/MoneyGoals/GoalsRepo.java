@@ -21,14 +21,6 @@ public class GoalsRepo {
 	
 	
 	
-	
-	
-	
-
-	
-	
-	
-	
 	public Goal addGoal(Goal goal) {
 		return goalsDB.save(goal);
 	}
